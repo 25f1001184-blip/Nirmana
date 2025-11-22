@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NIRMANA - Build Sell Grow</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Hamburger Menu Button -->
+<div id="menu-toggle" aria-label="Toggle menu" role="button" tabindex="0">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<nav id="menu-bar" aria-label="Side menu">
+  <ul>
+    <li tabindex="0">Account</li>
+    <li tabindex="0">Orders</li>
+    <li tabindex="0">Wishlist</li>
+    <li tabindex="0">Wallet</li>
+    <li tabindex="0">Top Deals</li>
+    <li tabindex="0">Support Local</li>
+    <li tabindex="0">Artist Info</li>
+    <li tabindex="0">Help</li>
+  </ul>
+</nav>
+
+<header>
+  <img src="WhatsApp-Image-2025-11-22-at-14.29.50_010701ec.jpg" alt="NIRMANA Logo" style="width:200px; margin-bottom:10px; display:block; margin-left:auto; margin-right:auto;">
+  <p style="text-align:center; font-style:italic; color:#8c6d3f; font-size:1.2em; margin-top:0;">Build Sell Grow</p>
+</header>
+
+<div id="search-bar">
+  <input type="text" id="search-input" placeholder="Search products..." />
+  <button id="search-button">Search</button>
+</div>
+
+<div id="trendy-slideshow">
+  <div class="slide active">
+    <h3>Handwoven Cotton Scarf</h3>
+    <div>Rating: ⭐⭐⭐⭐☆ (4.2)</div>
+    <div>Location: Kerala</div>
+    <button>View Artist Profile</button>
+  </div>
+  <div class="slide">
+    <h3>Handmade Ceramic Vase</h3>
+    <div>Rating: ⭐⭐⭐⭐⭐ (5.0)</div>
+    <div>Location: Rajasthan</div>
+    <button>View Artist Profile</button>
+  </div>
+  <div class="slide">
+    <h3>Clay Diyas Set</h3>
+    <div>Rating: ⭐⭐⭐⭐☆ (4.4)</div>
+    <div>Location: Uttar Pradesh</div>
+    <button>View Artist Profile</button>
+  </div>
+  <button id="prev-slide" class="nav-button" aria-label="Previous slide">❮</button>
+  <button id="next-slide" class="nav-button" aria-label="Next slide">❯</button>
+</div>
+
+<!-- Category squares styled as per your reference -->
+<div id="categories" style="display:flex; flex-wrap:wrap; gap:24px; justify-content:center; margin: 30px 0;">
+  <div class="category-square">
+    <img src="https://cdn-icons-png.flaticon.com/512/709/709612.png" alt="Decor" />
+    <span>Decor</span>
+  </div>
+  <div class="category-square">
+    <img src="https://cdn-icons-png.flaticon.com/512/892/892458.png" alt="Clothes" />
+    <span>Clothes</span>
+  </div>
+  <div class="category-square">
+    <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Accessories" />
+    <span>Accessories</span>
+  </div>
+  <div class="category-square">
+    <img src="https://cdn-icons-png.flaticon.com/512/2898/2898589.png" alt="Divine Supplies" />
+    <span>Divine Supplies</span>
+  </div>
+  <div class="category-square">
+    <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="Personal Care" />
+    <span>Personal Care</span>
+  </div>
+  <div class="category-square">
+    <img src="https://cdn-icons-png.flaticon.com/512/1067/1067643.png" alt="Home & Furniture" />
+    <span>Home & Furniture</span>
+  </div>
+</div>
+
+<!-- Search Results Overlay -->
+<div id="search-results-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#fff; overflow-y:auto; z-index:2000; padding:20px;">
+  <button id="close-search-results" 
+    style="position:fixed; top:20px; right:20px; z-index:2100; background:#8c6d3f; color:white; border:none; padding:10px 15px; cursor:pointer; border-radius:6px;">Close</button>
+  <h2>Search Results</h2>
+  <div id="search-results-list" style="display:flex; flex-wrap:wrap; gap:15px;"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
