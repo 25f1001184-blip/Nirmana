@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Account - NIRMANA</title>
+  <link rel="stylesheet" href="account.css" />
+</head>
+<body>
+  <div class="background-gradient"></div>
+  <header>
+    <img src="c:\Users\rajab\Documents\nirmana logo.jpg" alt="NIRMANA Logo" class="logo-img"/>
+    <h2 class="account-title">My Account</h2>
+  </header>
+
+  <main>
+    <section class="account-role">
+      <h3>Select Account Type:</h3>
+      <button class="role-btn" id="buyer-btn">Buyer</button>
+      <button class="role-btn" id="seller-btn">Seller</button>
+    </section>
+
+    <!-- Buyer Section -->
+    <section class="buyer-form-section" style="display:none;">
+      <button class="back-btn" id="buyer-back-btn">&larr; Back</button>
+      <h3>Buyer Details</h3>
+      <form id="buyer-form">
+        <label for="bname">Name:</label>
+        <input type="text" id="bname" name="bname" required>
+        <label for="bemail">Email:</label>
+        <input type="email" id="bemail" name="bemail" required>
+        <label for="bphone">Phone:</label>
+        <input type="text" id="bphone" name="bphone" required>
+        <label for="baddress">Delivery Address:</label>
+        <input type="text" id="baddress" name="baddress" required>
+        <label for="blocation">Location:</label>
+        <input type="text" id="blocation" name="blocation" required>
+        <button type="submit" class="profile-btn">Save Details</button>
+      </form>
+      <div id="buyer-summary"></div>
+    </section>
+
+    <!-- Seller Section -->
+    <section class="seller-form-section" style="display:none;">
+      <button class="back-btn" id="seller-back-btn">&larr; Back</button>
+      <h3>Seller Details</h3>
+      <form id="seller-form">
+        <label for="sname">Name:</label>
+        <input type="text" id="sname" name="sname" required>
+        <label for="semail">Email:</label>
+        <input type="email" id="semail" name="semail" required>
+        <label for="sphone">Phone:</label>
+        <input type="text" id="sphone" name="sphone" required>
+        <label for="saddress">Address:</label>
+        <input type="text" id="saddress" name="saddress" required>
+        <button type="submit" class="profile-btn">Save Seller Info</button>
+      </form>
+      <h3 style="margin-top:25px;">Upload Artwork</h3>
+      <form id="add-artwork-form">
+        <label for="aname">Artwork Name:</label>
+        <input type="text" id="aname" name="aname" required>
+        <label for="aprice">Price (₹):</label>
+        <input type="number" id="aprice" name="aprice" min="0" required>
+        <label for="aimage">Artwork Image:</label>
+        <input type="file" id="aimage" name="aimage" accept="image/*" required>
+        <button type="submit" class="profile-btn">Upload Artwork</button>
+      </form>
+      <div id="artwork-list"></div>
+    </section>
+  </main>
+  <script src="account.js"></script>
+</body>
+</html>

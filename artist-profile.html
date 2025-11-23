@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artist Profile - NIRMANA</title>
+  <link rel="stylesheet" href="artist-profile.css" />
+</head>
+<body>
+  <div class="background-gradient"></div>
+  
+  <!-- Hamburger Menu -->
+  <div id="menu-toggle" aria-label="Toggle menu">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav id="menu-bar" aria-label="Side menu">
+    <div class="menubar-btns">
+      <button class="menu-btn" id="account-btn">Account</button>
+      <button class="menu-btn" id="orders-btn">Orders</button>
+      <button class="menu-btn" id="wishlist-btn">Wishlist</button>
+      <button class="menu-btn" id="wallet-btn">Wallet</button>
+      <button class="menu-btn" id="deals-btn">Top Deals</button>
+      <button class="menu-btn" id="support-btn">Support Local</button>
+      <button class="menu-btn" id="artist-btn">All Artists</button>
+      <button class="menu-btn" id="help-btn">Help</button>
+    </div>
+  </nav>
+
+  <header>
+    <img src="nirmana-logo.jpg" alt="NIRMANA Logo" class="logo-img"/>
+    <button class="back-btn" onclick="history.back()">← Back</button>
+  </header>
+
+  <main>
+    <!-- Artist Profile Card -->
+    <section class="artist-profile-card">
+      <div class="artist-header">
+        <img id="artist-photo" class="artist-photo" src="" alt="Artist Photo">
+        <div class="artist-basic-info">
+          <h1 id="artist-name" class="artist-name"></h1>
+          <p id="artist-location" class="artist-location"></p>
+          <div id="artist-rating" class="artist-rating"></div>
+          <div class="artist-stats">
+            <span id="artist-experience" class="stat-item"></span>
+            <span id="artist-products-count" class="stat-item"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Section -->
+      <div class="artist-section">
+        <h2>About the Artist</h2>
+        <p id="artist-about" class="artist-about"></p>
+      </div>
+
+      <!-- Specialization & Mastery -->
+      <div class="artist-section">
+        <h2>Product Mastery</h2>
+        <div id="artist-mastery" class="mastery-tags"></div>
+      </div>
+
+      <!-- Famous Artwork -->
+      <div class="artist-section">
+        <h2>Famous Artworks</h2>
+        <div id="famous-artworks" class="famous-artworks-grid"></div>
+      </div>
+
+      <!-- Top Products -->
+      <div class="artist-section">
+        <h2>Top Products by This Artist</h2>
+        <div id="top-products" class="products-grid"></div>
+      </div>
+
+      <!-- All Products -->
+      <div class="artist-section">
+        <h2>All Products</h2>
+        <div id="all-products" class="products-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="artist-profile.js"></script>
+</body>
+</html>

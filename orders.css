@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #333333;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+.background-gradient {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: -1;
+  background: linear-gradient(135deg, #F8F8F8 35%, #FFF4DC 100%);
+}
+header {
+  text-align: center;
+  margin: 35px 0 20px 0;
+}
+.logo-img {
+  width: 110px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 12px #A1887F22;
+  margin-bottom: 8px;
+}
+.account-title {
+  color: #5D4037;
+  font-size: 1.3em;
+  letter-spacing: .5px;
+  font-weight: bold;
+}
+.order-role {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.role-btn {
+  background: #A1887F;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 25px;
+  font-weight: bold;
+  margin: 0 14px 0 0;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s, color 0.2s;
+}
+.role-btn:hover { background: #5D4037; }
+.buyer-orders,
+.seller-orders {
+  background: #FFF4DC;
+  border-radius: 13px;
+  box-shadow: 0 2px 8px rgba(161,136,127,0.15);
+  max-width: 500px;
+  margin: 0 auto 35px auto;
+  padding: 25px 22px;
+}
+h3 { color: #A1887F; margin-top: 0; }
+.orders-list {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.order-card {
+  background: #FFFBEA;
+  border-radius: 9px;
+  box-shadow: 0 2px 7px rgba(161,136,127,0.12);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.order-card .order-item-name {
+  font-weight: bold;
+  color: #5D4037;
+}
+.order-card .order-item-status {
+  font-size: 0.99em;
+  color: #A1887F;
+}
+.order-card .order-date {
+  font-size: 0.93em;
+  color: #888;
+}
+.order-card .order-item-price {
+  font-size: 0.97em;
+  color: #7a542c;
+}
+.gross-card {
+  background: #FFFBEA;
+  border-radius: 12px;
+  box-shadow: 0 2px 7px rgba(161,136,127,0.12);
+  margin-top: 22px;
+  padding: 17px 10px;
+  text-align: center;
+  max-width: 210px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gross-title {
+  color: #5D4037;
+  font-size: 1.08em;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.gross-value {
+  color: #A1887F;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+/* Back Button */
+.back-btn {
+  background: #A1887F;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 7px 22px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.18s;
+}
+.back-btn:hover {
+  background: #5D4037;
+}

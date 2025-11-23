@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All Artists - NIRMANA</title>
+  <link rel="stylesheet" href="artist-info.css" />
+</head>
+<body>
+  <div class="background-gradient"></div>
+  
+  <!-- Hamburger Menu -->
+  <div id="menu-toggle" aria-label="Toggle menu">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav id="menu-bar" aria-label="Side menu">
+    <div class="menubar-btns">
+      <button class="menu-btn" id="account-btn">Account</button>
+      <button class="menu-btn" id="orders-btn">Orders</button>
+      <button class="menu-btn" id="wishlist-btn">Wishlist</button>
+      <button class="menu-btn" id="wallet-btn">Wallet</button>
+      <button class="menu-btn" id="deals-btn">Top Deals</button>
+      <button class="menu-btn" id="support-btn">Support Local</button>
+      <button class="menu-btn" id="products-btn">Products</button>
+      <button class="menu-btn" id="help-btn">Help</button>
+    </div>
+  </nav>
+
+  <header>
+    <img src="c:\Users\rajab\Documents\nirmana logo.jpg" alt="NIRMANA Logo" class="logo-img"/>
+    <h1 class="page-title">Meet Our Artists</h1>
+    <p class="page-desc">Discover 200+ talented artisans preserving India's cultural heritage</p>
+  </header>
+
+  <!-- Search Bar -->
+  <section class="search-section">
+    <div id="search-bar">
+      <input type="text" id="search-input" placeholder="Search artists by name, location, or art form..." />
+      <button id="search-button">Search</button>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="filter-section">
+    <label for="state-filter">Filter by State:</label>
+    <select id="state-filter">
+      <option value="all">All States</option>
+      <option value="West Bengal">West Bengal</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Bihar">Bihar</option>
+      <option value="Odisha">Odisha</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Gujarat">Gujarat</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Assam">Assam</option>
+    </select>
+  </section>
+
+  <!-- Artists Grid -->
+  <main>
+    <div id="artists-grid" class="artists-grid">
+      <!-- Artists will be dynamically loaded here -->
+    </div>
+  </main>
+
+  <script src="artist-info.js"></script>
+</body>
+</html>

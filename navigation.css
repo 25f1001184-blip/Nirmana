@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #FFF9EF; /* Vibrant creamish background */
+  margin: 0;
+}
+.artist-profile-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #FFF4DC; /* Vibrant creamish container */
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(198,156,109,0.09);
+  padding: 30px 24px;
+}
+.artist-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 20px;
+}
+.artist-image {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #FFFBEA; /* Soft cream for photo */
+  box-shadow: 0 2px 6px rgba(198,156,109,0.13);
+}
+.artist-info {
+  flex:1;
+}
+.artist-name {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #B4884B; /* warm brown */
+}
+.artist-contact-details {
+  font-size: 1em;
+  margin-top: 8px;
+  color: #8c6d3f;
+  line-height: 1.5;
+}
+.artist-rating {
+  color: #f9d375; /* gold accent */
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 1.08em;
+}
+.send-message-btn {
+  display: inline-block;
+  margin-top: 25px;
+  background: #C69C6D; /* gold-brown accent */
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 1.09em;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 1px 6px rgba(198,156,109,0.13);
+  transition: background 0.2s;
+}
+.send-message-btn:hover {
+  background: #B4884B;
+}
+.back-btn {
+  display: inline-block;
+  margin-bottom: 25px;
+  background: #C69C6D;
+  color: white;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 1px 4px rgba(198,156,109,0.11);
+  transition: background 0.2s;
+}
+.back-btn:hover {
+  background: #B4884B;
+}
+.artist-about {
+  margin: 32px 0 16px 0;
+  font-size: 1.09em;
+  color: #8c6d3f;
+  line-height: 1.5;
+  background: #FFFBEA; /* Cream highlight */
+  border-radius: 11px;
+  padding: 14px 18px;
+  box-shadow: 0 1px 8px rgba(198,156,109,0.11);
+}
+.product-gallery {
+  margin-top: 35px;
+}
+.product-gallery h3 {
+  color: #B4884B;
+  margin-bottom: 14px;
+  font-size: 1.16em;
+  font-weight: bold;
+}
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.gallery-item {
+  width: 128px;
+  background: #FFF9EF; /* Cream background for products */
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(198,156,109,0.10);
+  text-align: center;
+  padding: 8px 8px 12px 8px;
+}
+.gallery-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 7px;
+  margin-bottom: 5px;
+}
+.gallery-item .item-name {
+  font-size: 1em;
+  color: #B4884B;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.gallery-item .item-rating {
+  color: #f9d375;
+  font-size: 0.97em;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artist Profile - NIRMANA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .artist-profile-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff8f0;
+      border-radius: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      padding: 30px 24px;
+    }
+    .artist-profile-header {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 20px;
+    }
+    .artist-image {
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #fafafa;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+    }
+    .artist-info {
+      flex:1;
+    }
+    .artist-name {
+      font-size: 1.7em;
+      font-weight: bold;
+      color: #5a3e1f;
+    }
+    .artist-contact-details {
+      font-size: 1em;
+      margin-top: 8px;
+      color: #493621;
+      line-height: 1.5;
+    }
+    .artist-rating {
+      color: #f1c40f;
+      font-weight: bold;
+      margin-top: 8px;
+      font-size: 1.08em;
+    }
+    .send-message-btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: #8c6d3f;
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 18px;
+      font-weight: bold;
+      font-size: 1.09em;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.11);
+      transition: background 0.2s;
+    }
+    .send-message-btn:hover {
+      background: #a4874c;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 25px;
+      background: #8c6d3f;
+      color: white;
+      border: none;
+      padding: 8px 22px;
+      border-radius: 16px;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.11);
+      transition: background 0.2s;
+    }
+    .back-btn:hover {
+      background: #a4874c;
+    }
+    .artist-about {
+      margin: 32px 0 16px 0;
+      font-size: 1.09em;
+      color: #5a3e1f;
+      line-height: 1.5;
+      background: #ffeccf;
+      border-radius: 11px;
+      padding: 14px 18px;
+      box-shadow: 0 1px 5px rgba(140,109,63,.08);
+    }
+    .product-gallery {
+      margin-top: 35px;
+    }
+    .product-gallery h3 {
+      color: #5a3e1f;
+      margin-bottom: 14px;
+      font-size: 1.16em;
+      font-weight: bold;
+    }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+    .gallery-item {
+      width: 128px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+      text-align: center;
+      padding: 8px 8px 12px 8px;
+    }
+    .gallery-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 7px;
+      margin-bottom: 5px;
+    }
+    .gallery-item .item-name {
+      font-size: 1em;
+      color: #5a3e1f;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .gallery-item .item-rating {
+      color: #f1c40f;
+      font-size: 0.97em;
+    }
+  </style>
+</head>
+<body>
+
+<a href="index.html" class="back-btn">&#8592; Back to Home</a>
+<div class="artist-profile-container">
+  <div class="artist-profile-header">
+    <img src="https://i.imgur.com/KQhjuDQ.png" alt="Artist Photo" class="artist-image" />
+    <div class="artist-info">
+      <div class="artist-name">Maya</div>
+      <div class="artist-rating">Rating: ⭐⭐⭐⭐⭐ (5.0)</div>
+      <div class="artist-contact-details">
+        <strong>Address:</strong> 32, Main Street, Jaipur, Rajasthan, India<br>
+        <strong>Email:</strong> maya.crafts@email.com<br>
+        <strong>Contact:</strong> +91-9876543210
+      </div>
+      <a href="mailto:maya.crafts@email.com" class="send-message-btn">Send a Message</a>
+    </div>
+  </div>
+  <div class="artist-about">
+    <strong>About:</strong> Maya is a master craftswoman known for her exquisite block printing and pottery. With over 15 years of experience, her creations blend tradition and vibrant artistry. Each item is handmade, supporting sustainable practices and the local artisan community.
+  </div>
+  <div class="product-gallery">
+    <h3>Featured Products</h3>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1512238701577-f182d9ef8af7?auto=format&fit=crop&w=200&q=80" alt="Ceramic Vase" />
+        <div class="item-name">Ceramic Vase</div>
+        <div class="item-rating">⭐⭐⭐⭐⭐ (5.0)</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=200&q=80" alt="Hand-painted Pot" />
+        <div class="item-name">Hand-painted Pot</div>
+        <div class="item-rating">⭐⭐⭐⭐ (4.0)</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1454023492550-5696f8ff10e1?auto=format&fit=crop&w=200&q=80" alt="Block Print Scarf" />
+        <div class="item-name">Block Print Scarf</div>
+        <div class="item-rating">⭐⭐⭐⭐⭐ (5.0)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

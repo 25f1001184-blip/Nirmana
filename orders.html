@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orders - NIRMANA</title>
+  <link rel="stylesheet" href="orders.css" />
+</head>
+<body>
+  <div class="background-gradient"></div>
+  <header>
+    <img src="c:\Users\rajab\Documents\nirmana logo.jpg" alt="NIRMANA Logo" class="logo-img"/>
+    <h2 class="account-title">Order Center</h2>
+  </header>
+
+  <main>
+    <section class="order-role">
+      <h3>Select Account Type:</h3>
+      <button class="role-btn" id="buyer-btn">Buyer</button>
+      <button class="role-btn" id="seller-btn">Seller</button>
+    </section>
+
+    <!-- Buyer view -->
+    <section class="buyer-orders" style="display:none;">
+      <button class="back-btn" id="buyer-back-btn">&larr; Back</button>
+      <h3>Buyer - Upcoming Orders</h3>
+      <div id="buyer-upcoming-orders" class="orders-list"></div>
+      <h3 style="margin-top:22px;">Buyer - Past Orders</h3>
+      <div id="buyer-past-orders" class="orders-list"></div>
+    </section>
+
+    <!-- Seller view -->
+    <section class="seller-orders" style="display:none;">
+      <button class="back-btn" id="seller-back-btn">&larr; Back</button>
+      <h3>Seller - Upcoming Orders</h3>
+      <div id="seller-upcoming-orders" class="orders-list"></div>
+      <h3 style="margin-top:22px;">Seller - Past Orders</h3>
+      <div id="seller-past-orders" class="orders-list"></div>
+      <div class="gross-card">
+        <div class="gross-title">Monthly Gross Earnings</div>
+        <div id="gross-earning" class="gross-value">₹0</div>
+      </div>
+    </section>
+  </main>
+  <script src="orders.js"></script>
+</body>
+</html>

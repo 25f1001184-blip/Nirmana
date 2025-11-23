@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Traditional Artworks - NIRMANA</title>
+  <link rel="stylesheet" href="products.css" />
+</head>
+<body>
+  <div class="background-gradient"></div>
+  
+  <!-- Hamburger Menu -->
+  <div id="menu-toggle" aria-label="Toggle menu">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav id="menu-bar" aria-label="Side menu">
+    <div class="menubar-btns">
+      <button class="menu-btn" id="account-btn">Account</button>
+      <button class="menu-btn" id="orders-btn">Orders</button>
+      <button class="menu-btn" id="wishlist-btn">Wishlist</button>
+      <button class="menu-btn" id="wallet-btn">Wallet</button>
+      <button class="menu-btn" id="deals-btn">Top Deals</button>
+      <button class="menu-btn" id="support-btn">Support Local</button>
+      <button class="menu-btn" id="artist-btn">Artist Info</button>
+      <button class="menu-btn" id="help-btn">Help</button>
+    </div>
+  </nav>
+
+  <header>
+    <img src="c:\Users\rajab\Documents\nirmana logo.jpg" alt="NIRMANA Logo" class="logo-img"/>
+    <h1 class="page-title">Traditional Artworks Marketplace</h1>
+    <p class="page-desc">Discover authentic handcrafted art from India's finest artisans</p>
+  </header>
+
+  <!-- Search Bar -->
+  <section class="search-section">
+    <div id="search-bar">
+      <input type="text" id="search-input" placeholder="Search by artwork, artist, state, or location..." />
+      <button id="search-button">Search</button>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+<section class="filter-section">
+  <label for="category-filter">Category:</label>
+  <select id="category-filter">
+    <option value="all">All Categories</option>
+    <option value="Decor">Decor</option>
+    <option value="Clothes">Clothes</option>
+    <option value="Accessories">Accessories</option>
+    <option value="Divine Supplies">Divine Supplies</option>
+    <option value="Personal Care">Personal Care</option>
+    <option value="Home & Furniture">Home & Furniture</option>
+  </select>
+  
+  <label for="state-filter">Filter by State:</label>
+  <select id="state-filter">
+    <option value="all">All States</option>
+    <option value="West Bengal">West Bengal</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Assam">Assam</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Gujarat">Gujarat</option>
+  </select>
+  
+  <label for="sort-filter">Sort by:</label>
+  <select id="sort-filter">
+    <option value="featured">Featured</option>
+    <option value="price-low">Price: Low to High</option>
+    <option value="price-high">Price: High to Low</option>
+    <option value="rating">Highest Rated</option>
+  </select>
+</section>
+
+
+  <!-- Products Grid -->
+  <main>
+    <div id="products-grid" class="products-grid">
+      <!-- Products will be dynamically loaded here -->
+    </div>
+  </main>
+
+  <footer style="text-align:center; padding:40px 20px; color:#7a542c;">
+    <p>© 2025 NIRMANA. Celebrating India's Cultural Heritage</p>
+  </footer>
+
+  <script src="products.js"></script>
+</body>
+</html>

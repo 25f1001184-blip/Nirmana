@@ -1,97 +1,106 @@
-// Hamburger menu
+// ========== HAMBURGER MENU ==========
 const menuToggle = document.getElementById('menu-toggle');
 const menuBar = document.getElementById('menu-bar');
+
 menuToggle.addEventListener('click', () => {
   const shown = menuBar.classList.toggle('show');
   document.body.classList.toggle('menu-open', shown);
 });
-menuToggle.addEventListener('keydown', e => {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault();
-    menuToggle.click();
-  }
-});
-function toggleSubcategories(id) {
-  const element = document.getElementById(id);
-  const visible = element.style.display === "flex";
-  element.style.display = visible ? "none" : "flex";
-  const category = element.previousElementSibling;
-  category.setAttribute("aria-expanded", String(!visible));
-  element.setAttribute("aria-hidden", String(visible));
-}
-document.querySelectorAll('.category').forEach(cat => {
-  cat.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      cat.click();
-    }
-  });
-});
 
-// Slideshow
-let currentSlide = 0;
-const slides = document.querySelectorAll("#trendy-slideshow .slide");
-const totalSlides = slides.length;
-const prevBtn = document.getElementById('prev-slide');
-const nextBtn = document.getElementById('next-slide');
-function showSlide(index) {
-  slides.forEach(s => s.classList.remove('active'));
-  slides[index].classList.add('active');
-}
-prevBtn.addEventListener('click', () => {
-  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-  showSlide(currentSlide);
-});
-nextBtn.addEventListener('click', () => {
-  currentSlide = (currentSlide + 1) % totalSlides;
-  showSlide(currentSlide);
-});
+// ========== MENU BUTTON NAVIGATION ==========
+document.getElementById('account-btn').onclick = () => window.location.href = 'account.html';
+document.getElementById('orders-btn').onclick = () => window.location.href = 'orders.html';
+document.getElementById('wishlist-btn').onclick = () => window.location.href = 'wishlist.html';
+document.getElementById('wallet-btn').onclick = () => window.location.href = 'wallet.html';
+document.getElementById('deals-btn').onclick = () => window.location.href = 'deals.html';
+document.getElementById('support-btn').onclick = () => window.location.href = 'support-local.html';
+document.getElementById('artist-btn').onclick = () => window.location.href = 'artist-info.html';
+document.getElementById('help-btn').onclick = () => window.location.href = 'help.html';
 
-// Search results overlay functionality
-const allProducts = [
-  {name: "Handwoven Cotton Scarf", category: "Clothes", rating: 4.2, location: "Kerala", artist: "Arjun"},
-  {name: "Handmade Ceramic Vase", category: "Decor", rating: 5.0, location: "Rajasthan", artist: "Maya"},
-  {name: "Clay Diyas Set", category: "Divine Supplies", rating: 4.4, location: "Uttar Pradesh", artist: "Sita"},
-  {name: "Jute Bags", category: "Accessories", rating: 4.0, location: "West Bengal", artist: "Rohan"},
-  {name: "Wooden Laptop Stands", category: "Home & Furniture", rating: 4.6, location: "Punjab", artist: "Kiran"}
-];
+// ========== SEARCH FUNCTIONALITY - REDIRECT TO PRODUCTS PAGE ==========
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
-const overlay = document.getElementById('search-results-overlay');
-const resultsList = document.getElementById('search-results-list');
-const closeBtn = document.getElementById('close-search-results');
 
+// Search on button click
 searchButton.addEventListener('click', () => {
-  const keyword = searchInput.value.trim().toLowerCase();
-  if (!keyword) return;
-
-  const filtered = allProducts.filter(p =>
-    p.name.toLowerCase().includes(keyword) || p.category.toLowerCase().includes(keyword)
-  );
-
-  resultsList.innerHTML = '';
-
-  if (filtered.length === 0) {
-    resultsList.innerHTML = '<p>No products found.</p>';
+  const keyword = searchInput.value.trim();
+  if (keyword) {
+    // Redirect to products page with search parameter
+    window.location.href = `products.html?search=${encodeURIComponent(keyword)}`;
   } else {
-    filtered.forEach(p => {
-      const div = document.createElement('div');
-      div.className = 'search-result-item';
-      div.innerHTML = `
-        <h3>${p.name}</h3>
-        <div>Category: ${p.category}</div>
-        <div>Rating: ${"⭐".repeat(Math.round(p.rating))} (${p.rating.toFixed(1)})</div>
-        <div>Location: ${p.location}</div>
-        <button>View Artist Profile: ${p.artist}</button>
-      `;
-      resultsList.appendChild(div);
-    });
+    // If empty, just go to products page
+    window.location.href = 'products.html';
   }
-
-  overlay.style.display = 'block';
-  document.body.style.overflow = 'hidden';
 });
-closeBtn.addEventListener('click', () => {
-  overlay.style.display = 'none';
-  document.body.style.overflow = 'auto';
+
+// Search on Enter key
+searchInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    const keyword = searchInput.value.trim();
+    if (keyword) {
+      window.location.href = `products.html?search=${encodeURIComponent(keyword)}`;
+    } else {
+      window.location.href = 'products.html';
+    }
+  }
+});
+
+// ========== PRODUCT IMAGE SLIDER ==========
+// Product images array - FIXED PATHS (use relative paths, not C:\Users\...)
+const productImages1 = [
+  "images/scarf-1.webp",   // Put your images in an "images" folder
+  "images/scarf-2.webp",
+  "images/scarf-3.webp"
+];
+
+let productImage1Index = 0;
+
+const productImage1 = document.getElementById('productImage1');
+const leftArrow1 = document.querySelector('#trendy-slideshow .gallery-arrow.left');
+const rightArrow1 = document.querySelector('#trendy-slideshow .gallery-arrow.right');
+
+function updateProductImage1() {
+  if (productImage1) {
+    productImage1.src = productImages1[productImage1Index];
+  }
+}
+
+// Left arrow click
+if (leftArrow1) {
+  leftArrow1.addEventListener('click', () => {
+    productImage1Index = (productImage1Index - 1 + productImages1.length) % productImages1.length;
+    updateProductImage1();
+  });
+}
+
+// Right arrow click
+if (rightArrow1) {
+  rightArrow1.addEventListener('click', () => {
+    productImage1Index = (productImage1Index + 1) % productImages1.length;
+    updateProductImage1();
+  });
+}
+
+//
+// ========== CATEGORY NAVIGATION ==========
+const categorySquares = document.querySelectorAll('.category-square');
+
+categorySquares.forEach(square => {
+  square.style.cursor = 'pointer'; // Make it look clickable
+  
+  square.addEventListener('click', () => {
+    const category = square.getAttribute('data-category');
+    // Redirect to products page with category parameter
+    window.location.href = `products.html?category=${encodeURIComponent(category)}`;
+  });
+  
+  // Add hover effect
+  square.addEventListener('mouseenter', () => {
+    square.style.transform = 'scale(1.05)';
+    square.style.transition = 'transform 0.2s ease';
+  });
+  
+  square.addEventListener('mouseleave', () => {
+    square.style.transform = 'scale(1)';
+  });
 });

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Wishlist - NIRMANA</title>
+  <link rel="stylesheet" href="wishlist.css" />
+</head>
+<body>
+  <div class="background-gradient"></div>
+  
+  <!-- Hamburger Menu -->
+  <div id="menu-toggle" aria-label="Toggle menu">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav id="menu-bar" aria-label="Side menu">
+    <div class="menubar-btns">
+      <button class="menu-btn" id="account-btn">Account</button>
+      <button class="menu-btn" id="orders-btn">Orders</button>
+      <button class="menu-btn" id="wishlist-btn">Wishlist</button>
+      <button class="menu-btn" id="wallet-btn">Wallet</button>
+      <button class="menu-btn" id="deals-btn">Top Deals</button>
+      <button class="menu-btn" id="support-btn">Support Local</button>
+      <button class="menu-btn" id="artist-btn">Artist Info</button>
+      <button class="menu-btn" id="help-btn">Help</button>
+    </div>
+  </nav>
+
+  <header>
+    <img src="c:\Users\rajab\Documents\nirmana logo.jpg" alt="NIRMANA Logo" class="logo-img"/>
+    <h1 class="page-title">My Wishlist</h1>
+    <p class="page-desc">Your favorite traditional artworks saved for later</p>
+  </header>
+
+  <!-- Wishlist Stats -->
+  <section class="wishlist-stats">
+    <div class="stat-card">
+      <span class="stat-number" id="total-items">0</span>
+      <span class="stat-label">Items Saved</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number" id="total-value">₹0</span>
+      <span class="stat-label">Total Value</span>
+    </div>
+  </section>
+
+  <!-- Wishlist Actions -->
+  <section class="wishlist-actions">
+    <button id="clear-wishlist-btn" class="action-btn secondary-btn">Clear All</button>
+    <button id="share-wishlist-btn" class="action-btn primary-btn">Share Wishlist</button>
+  </section>
+
+  <!-- Wishlist Items -->
+  <main>
+    <div id="wishlist-container" class="wishlist-container">
+      <!-- Wishlist items will be dynamically loaded here -->
+      <div id="empty-wishlist" class="empty-wishlist">
+        <img src="https://via.placeholder.com/150x150/FFF4DC/A1887F?text=Empty" alt="Empty Wishlist" class="empty-icon">
+        <h2>Your Wishlist is Empty</h2>
+        <p>Start adding your favorite artworks to save them for later!</p>
+        <button onclick="window.location.href='products.html'" class="browse-btn">Browse Products</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="wishlist.js"></script>
+</body>
+</html>
